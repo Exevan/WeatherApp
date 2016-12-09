@@ -6,8 +6,8 @@
 package com.exevan.weatherappdata.controller;
 
 import com.exevan.weatherappdata.domain.IService;
+import javax.ejb.EJB;
 import javax.ejb.Stateless;
-import javax.inject.Inject;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
@@ -21,7 +21,7 @@ import org.json.JSONObject;
 @Path("/data")
 public class DataController {
 
-    @Inject
+    @EJB
     private IService service;
 
     @Path("/temp")
